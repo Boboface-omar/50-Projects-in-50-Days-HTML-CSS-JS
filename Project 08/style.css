@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RMuli:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    background-color: steelblue;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,3 +16,97 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+.container{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.text{
+    margin-top: 30px;
+    text-align: center
+}
+
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.form-control input:focus, .form-control input:valid{
+    outline: none;
+    border-bottom-color: lightblue;
+}
+
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+/* Style pour chaque lettre (span) à l'intérieur d'une étiquette (<label>) */
+.form-control label span {
+    /* Affiche chaque lettre comme un bloc en ligne, ce qui permet de leur appliquer des transformations (comme translateY) */
+    display: inline-block;
+    /* Définit la taille de la police à 18px. (Note: 'font-style' a été corrigé en 'font-size' qui est la propriété correcte pour la taille) */
+    font-size: 18px;
+    /* Assure que chaque lettre a une largeur minimale, pour que même les caractères fins comme 'i' ou 'l' aient de l'espace */
+    min-width: 5px;
+    /* Définit l'animation de transition. Elle durera 0.2 secondes avec une courbe de vitesse personnalisée (cubic-bezier) qui crée un effet de "rebond" */
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Style qui s'applique aux lettres (span) lorsque l'input associé est en focus (cliqué) OU lorsque son contenu est valide */
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    /* Change la couleur des lettres en bleu clair */
+    color: lightblue;
+    /* Déplace les lettres de 30 pixels vers le haut pour créer l'effet de flottement */
+    transform: translateY(-30px);
+}
+
+
+
+
