@@ -75,6 +75,7 @@ body {
     color: white;
 }
 
+/* Style qui s'applique lorsque l'input est en focus (cliqué) OU lorsque son contenu est valide */ */
 .form-control input:focus, .form-control input:valid{
     outline: none;
     border-bottom-color: lightblue;
